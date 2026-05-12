@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Internet and Web Basics - SET D Practical Exam</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header" id="home">
+    <nav class="navbar">
+      <div class="logo">EA<span>Web</span></div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#tasks">SET D Tasks</a></li>
+        <li><a href="#profile">Profile</a></li>
+        <li><a href="#footer">Footer</a></li>
+      </ul>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-content">
+        <p class="badge">Internet and Web Basics PRACTICAL EXAM</p>
+        <h1>Professional JavaScript Task Website</h1>
+        <p class="hero-text">
+          A modern, responsive and fully working website project built with HTML, CSS and JavaScript only.
+        </p>
+        <div class="hero-buttons">
+          <a href="#tasks" class="btn primary">View Tasks</a>
+          <a href="#profile" class="btn secondary">Student Profile</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h3>Project Information</h3>
+        <p><strong>Student:</strong> Bünyamin Ekrem Ağsakallı</p>
+        <p><strong>Subject:</strong> Internet and Web Basics</p>
+        <p><strong>SET:</strong> D</p>
+        <p><strong>Date:</strong> <span id="currentDate"></span></p>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="profile-section" id="profile">
+      <div class="section-title">
+        <p>Student Profile</p>
+        <h2>About This Practical Exam Project</h2>
+      </div>
+      <div class="profile-grid">
+        <div class="profile-card">
+          <div class="avatar">EA</div>
+          <h3>Ekrem Ağsakallı</h3>
+          <p>Cyber Security Engineering Student</p>
+        </div>
+        <div class="profile-details">
+          <h3>Website Purpose</h3>
+          <p>
+            This website demonstrates beginner-friendly but professional JavaScript skills using input validation,
+            arrays, strings, events, forms, timer controls and DOM manipulation.
+          </p>
+          <div class="skills">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Responsive Design</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tasks-section" id="tasks">
+      <div class="section-title">
+        <p>SET D</p>
+        <h2>JavaScript Tasks Section</h2>
+      </div>
+
+      <div class="task-menu" id="taskMenu"></div>
+
+      <div class="tasks-container">
+        <article class="task-card" id="task1">
+          <h3>Task 1: Reverse Words Order</h3>
+          <p>Enter a sentence and reverse the order of words.</p>
+          <input id="sentenceInput" type="text" placeholder="Example: I love web basics" />
+          <button onclick="reverseWords()">Reverse Words</button>
+          <div class="output" id="output1"></div>
+        </article>
+
+        <article class="task-card" id="task2">
+          <h3>Task 2: Extract Characters</h3>
+          <p>Extract first, third, fourth and last characters from a string.</p>
+          <input id="charInput" type="text" placeholder="Enter a word or sentence" />
+          <button onclick="extractCharacters()">Extract</button>
+          <div class="output" id="output2"></div>
+        </article>
+
+        <article class="task-card" id="task3">
+          <h3>Task 3: Find Longest Word</h3>
+          <p>Enter a sentence and find the longest word.</p>
+          <input id="longestInput" type="text" placeholder="Enter sentence" />
+          <button onclick="findLongestWord()">Find Longest</button>
+          <div class="output" id="output3"></div>
+        </article>
+
+        <article class="task-card" id="task4">
+          <h3>Task 4: Toggle Case</h3>
+          <p>Change uppercase letters to lowercase and lowercase letters to uppercase.</p>
+          <input id="caseInput" type="text" placeholder="Example: Hello WEB" />
+          <button onclick="toggleCase()">Toggle Case</button>
+          <div class="output" id="output4"></div>
+        </article>
+
+        <article class="task-card" id="task5">
+          <h3>Task 5: Word Count + Space Count</h3>
+          <p>Count words and spaces in a sentence.</p>
+          <input id="countInput" type="text" placeholder="Enter sentence" />
+          <button onclick="countWordsSpaces()">Count</button>
+          <div class="output" id="output5"></div>
+        </article>
+
+        <article class="task-card" id="task6">
+          <h3>Task 6: Fruits Array Third Element</h3>
+          <p>Create an array of fruits and show the third element.</p>
+          <button onclick="showThirdFruit()">Show Third Fruit</button>
+          <div class="output" id="output6"></div>
+        </article>
+
+        <article class="task-card" id="task7">
+          <h3>Task 7: Remove Duplicates</h3>
+          <p>Remove duplicate values from an array.</p>
+          <input id="duplicateInput" type="text" placeholder="Example: apple,banana,apple,orange" />
+          <button onclick="removeDuplicates()">Remove Duplicates</button>
+          <div class="output" id="output7"></div>
+        </article>
+
+        <article class="task-card" id="task8">
+          <h3>Task 8: Last Element Using Popup</h3>
+          <p>Enter array values using popup and find the last element.</p>
+          <button onclick="lastElementPopup()">Open Popup</button>
+          <div class="output" id="output8"></div>
+        </article>
+
+        <article class="task-card" id="task9">
+          <h3>Task 9: Find Index of Element</h3>
+          <p>Search an element inside an array using user input.</p>
+          <input id="arrayInput9" type="text" placeholder="Array: red,blue,green" />
+          <input id="searchInput9" type="text" placeholder="Search element" />
+          <button onclick="findElementIndex()">Find Index</button>
+          <div class="output" id="output9"></div>
+        </article>
+
+        <article class="task-card" id="task10">
+          <h3>Task 10: Splice Delete One by One</h3>
+          <p>Use splice() to delete elements from an array one by one.</p>
+          <button onclick="resetSpliceArray()">Reset Array</button>
+          <button onclick="deleteOneByOne()">Delete One Element</button>
+          <div class="output" id="output10"></div>
+        </article>
+
+        <article class="task-card" id="task11">
+          <h3>Task 11: Arithmetic Function</h3>
+          <p>Choose an arithmetic operation and calculate two numbers.</p>
+          <input id="num1" type="number" placeholder="First number" />
+          <input id="num2" type="number" placeholder="Second number" />
+          <select id="operation">
+            <option value="+">Addition +</option>
+            <option value="-">Subtraction -</option>
+            <option value="*">Multiplication *</option>
+            <option value="/">Division /</option>
+          </select>
+          <button onclick="arithmeticChoice()">Calculate</button>
+          <div class="output" id="output11"></div>
+        </article>
+
+        <article class="task-card" id="task12">
+          <h3>Task 12: Popup Numeric/String Rule Arithmetic</h3>
+          <p>Use popup inputs. If numeric, calculate. If string, show validation message.</p>
+          <button onclick="popupArithmeticRule()">Start Popup Arithmetic</button>
+          <div class="output" id="output12"></div>
+        </article>
+
+        <article class="task-card" id="task13">
+          <h3>Task 13: Required Field Validation</h3>
+          <p>Check that a required field is not empty.</p>
+          <input id="requiredInput" type="text" placeholder="Required field" />
+          <button onclick="requiredValidation()">Validate</button>
+          <div class="output" id="output13"></div>
+        </article>
+
+        <article class="task-card" id="task14">
+          <h3>Task 14: Age Validation</h3>
+          <p>Age must be 18 or older.</p>
+          <input id="ageInput" type="number" placeholder="Enter age" />
+          <button onclick="ageValidation()">Check Age</button>
+          <div class="output" id="output14"></div>
+        </article>
+
+        <article class="task-card" id="task15">
+          <h3>Task 15: Signup Form Submit and Reset</h3>
+          <p>Complete the signup form and use submit/reset buttons.</p>
+          <form id="signupForm">
+            <input id="nameField" type="text" placeholder="Full Name" />
+            <input id="emailField" type="email" placeholder="Email Address" />
+            <input id="passwordField" type="password" placeholder="Password" />
+            <div class="button-row">
+              <button type="submit">Submit</button>
+              <button type="reset">Reset</button>
+            </div>
+          </form>
+          <div class="output" id="output15"></div>
+        </article>
+
+        <article class="task-card" id="task16">
+          <h3>Task 16: Display Submitted Data</h3>
+          <p>Display submitted data with a success message.</p>
+          <input id="displayName" type="text" placeholder="Name" />
+          <input id="displayCourse" type="text" placeholder="Course" />
+          <button onclick="displaySubmittedData()">Display Data</button>
+          <div class="output" id="output16"></div>
+        </article>
+
+        <article class="task-card" id="task17">
+          <h3>Task 17: Reset Button Clears Output</h3>
+          <p>Write text, show it, then clear output with reset.</p>
+          <input id="resetDemoInput" type="text" placeholder="Write something" />
+          <button onclick="showResetDemo()">Show</button>
+          <button onclick="clearResetDemo()">Reset Output</button>
+          <div class="output" id="output17"></div>
+        </article>
+
+        <article class="task-card" id="task18">
+          <h3>Task 18: Store 3 Persons in Array</h3>
+          <p>Store three persons in an array and display them.</p>
+          <button onclick="displayPersons()">Display Persons</button>
+          <div class="output" id="output18"></div>
+        </article>
+
+        <article class="task-card" id="task19">
+          <h3>Task 19: Countdown Timer</h3>
+          <p>Countdown timer with Start, Pause and Reset buttons.</p>
+          <input id="timerInput" type="number" placeholder="Seconds" min="1" />
+          <div class="timer-display" id="timerDisplay">00</div>
+          <div class="button-row">
+            <button onclick="startTimer()">Start</button>
+            <button onclick="pauseTimer()">Pause</button>
+            <button onclick="resetTimer()">Reset</button>
+          </div>
+          <div class="output" id="output19"></div>
+        </article>
+
+        <article class="task-card" id="task20">
+          <h3>Task 20: Double-Click Clear Output</h3>
+          <p>Double-click the output area to clear it.</p>
+          <input id="doubleInput" type="text" placeholder="Write text for output" />
+          <button onclick="showDoubleClickText()">Show Text</button>
+          <div class="output double-clear" id="output20" ondblclick="clearDoubleClickOutput()">
+            Double-click this output area to clear it.
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer">
+    <p>© 2026 Ekrem Ağsakallı | Internet and Web Basics | SET D</p>
+    <p>Ready for GitHub Pages Hosting</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
